@@ -57,7 +57,7 @@ norm0 = data.rolling(window=30,min_periods=10).apply(min_max_norm,raw=True)
 norm1 = data.rolling(window=30,min_periods=10).apply(mean_std_norm,raw=True)
 norm2 = rolling_whiten(source,window=30,min_periods=10)#pca whitening using close open min max vol
 
-    
+
 aa= pd.concat([norm0,norm1,norm2],axis=1)
 
 
